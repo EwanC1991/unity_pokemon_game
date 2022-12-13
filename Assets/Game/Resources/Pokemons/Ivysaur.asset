@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e570a50e06f9461c901177ae3931371, type: 3}
+  m_Name: Ivysaur
+  m_EditorClassIdentifier: 
+  name: Ivysaur
+  description: 
+  frontSprite: {fileID: 21300000, guid: eb40b653299e14162927db296c8ef808, type: 3}
+  backSprite: {fileID: 21300000, guid: c4227345fbf814593a306a5c5f0f00eb, type: 3}
+  type1: 12
+  type2: 4
+  maxHp: 60
+  attack: 62
+  defense: 63
+  spAttack: 80
+  spDefense: 80
+  speed: 60
+  learnableMoves: []
