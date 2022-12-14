@@ -57,24 +57,33 @@ public class GameController : MonoBehaviour
         battleSystem.StartBattle(playerParty, wildPokemon);
    }
 
+   TrainerController trainer;
+
    public void StartTrainerBattle(TrainerController trainer) 
    {
-        state = GameState.Battle;
-        battleSystem.gameObject.SetActive(true);
-        worldCamera.gameObject.SetActive(false);
+     state = GameState.Battle;
+     battleSystem.gameObject.SetActive(true);
+     worldCamera.gameObject.SetActive(false);
 
-        var playerParty = playerController.GetComponent<PokemonParty>();
-        var trainerParty = trainer.GetComponent<PokemonParty>();
+     this.trainer = trainer;
+     var playerParty = playerController.GetComponent<PokemonParty>();
+     var trainerParty = trainer.GetComponent<PokemonParty>();
 
 
-        battleSystem.StartTrainerBattle(playerParty, trainerParty);
+     battleSystem.StartTrainerBattle(playerParty, trainerParty);
    }
 
    void EndBattle(bool won)
    {
-        state = GameState.FreeRoam;
-        battleSystem.gameObject.SetActive(false);
-        worldCamera.gameObject.SetActive(true);
+     if (trainer!= null && won == true)
+     {
+          trainer.BattleLost();
+          trainer = null;
+     }
+        
+     state = GameState.FreeRoam;
+     battleSystem.gameObject.SetActive(false);
+     worldCamera.gameObject.SetActive(true);
    }
 
    private void Update() 

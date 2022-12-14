@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainerController : MonoBehaviour
+public class TrainerController : MonoBehaviour, Interactable
 {
     [SerializeField] string name;
     [SerializeField] Sprite sprite;
     [SerializeField] Dialog dialog;
+    [SerializeField] Dialog dialogAfterBattle;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
+
+    // State
+    bool battleLost = false;
 
     Character character;
 
@@ -19,7 +23,36 @@ public class TrainerController : MonoBehaviour
 
     private void Start() 
     {
-        SetFovRotation(character.Animator.DefaultDirection);    
+        SetFovRotation(character.Animator.DefaultDirection);
+
+    }
+
+    private void Update()
+    {
+        character.HandleUpdate();
+    }
+
+        public void Interact(Transform initiator)
+    {
+        character.LookTowards(initiator.position);
+
+        if (!battleLost)
+        {
+                StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () => 
+            {
+                GameController.Instance.StartTrainerBattle(this);
+            }));
+        }
+        else
+        {
+            StartCoroutine(DialogManager.Instance.ShowDialog(dialogAfterBattle));
+        }
+    }
+
+    public void BattleLost()
+    {
+        battleLost = true;
+        fov.gameObject.SetActive(false);
     }
 
     public IEnumerator TriggerTrainerBattle(PlayerController player)
@@ -59,6 +92,8 @@ public class TrainerController : MonoBehaviour
         fov.transform.eulerAngles = new Vector3(0f, 0f, angle);
 
     }
+
+
 
     public string Name {
         get => name;
