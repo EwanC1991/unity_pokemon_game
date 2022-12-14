@@ -27,7 +27,8 @@ Status Moves and Volatile Statuses (Confusion).<br>
 NPC's. <br>
 NPC Dialog System.<br>
 Trainers.<br>
-Trainer Battles.<br><br>
+Trainer Battles.<br>
+Catching Mechanic. <br><br>
 
 More updates and videos are available on my <a href= https://www.linkedin.com/in/ewancruickshank91/>LinkedIn</a>
 
