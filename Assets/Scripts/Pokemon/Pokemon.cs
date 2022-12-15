@@ -30,6 +30,8 @@ public class Pokemon
             return level;
       }
     }
+   
+   public int Exp { get; set; }
 
    public int HP { get; set; }
 
@@ -64,6 +66,8 @@ public class Pokemon
          if (Moves.Count >= 4)
             break;
       }
+
+   Exp = Base.GetExpForLevel(Level);
 
    CalculateStats();
 
@@ -134,6 +138,17 @@ public class Pokemon
             StatusChanges.Enqueue($"{Base.Name}'s {stat} fell!");
          Debug.Log($"{stat} has been boosted to {StatBoosts[stat]}");
       }
+   }
+
+   public bool CheckForLevelUp()
+   {
+      if (Exp > Base.GetExpForLevel(level + 1))
+      {
+         ++level;
+         return true;
+      }
+
+      return false;
    }
 
    public int MaxHp { get; private set; }
