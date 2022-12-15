@@ -28,7 +28,9 @@ NPC's. <br>
 NPC Dialog System.<br>
 Trainers.<br>
 Trainer Battles.<br>
-Catching Mechanic. <br><br>
+Catching Mechanic. <br>
+EXP Yield and Level Up Mechanic. <br>
+Running from Battle Mechanic. <br><br>
 
 More updates and videos are available on my <a href= https://www.linkedin.com/in/ewancruickshank91/>LinkedIn</a>
 
