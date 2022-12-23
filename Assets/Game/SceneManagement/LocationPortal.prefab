@@ -41,9 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5124735640647145824}
   - component: {fileID: 5124735640647145831}
-  - component: {fileID: 5124735640647145830}
+  - component: {fileID: 6846313934192262658}
   m_Layer: 13
-  m_Name: Portal
+  m_Name: LocationPortal
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5124735640647145830
+--- !u!114 &6846313934192262658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,9 +100,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5124735640647145829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ad46714f5e94a99940e26ca693dbfb, type: 3}
+  m_Script: {fileID: 11500000, guid: d9fe6f1d7804b45ee8976e21b50e0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 1
   destinationPortal: 0
   spawnPoint: {fileID: 3802270864604640655}
