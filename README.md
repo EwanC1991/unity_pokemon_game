@@ -1,6 +1,6 @@
 ### Unity Pokemon Game
 
-This is a personal project to make Pokemon game from scratch to learn C# and Unity.
+This is a personal project to make a Pokemon game from scratch to learn C# and Unity.
 
 Features implemented currently:
 
