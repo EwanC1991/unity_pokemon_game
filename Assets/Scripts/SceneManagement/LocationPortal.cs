@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Linq;
 
-public class Portal : MonoBehaviour, IPlayerTriggerable
+// Teleports the player to a different position without switching scenes
+public class LocationPortal : MonoBehaviour, IPlayerTriggerable
 {
-
-    [SerializeField] int sceneToLoad = -1;
     [SerializeField] DestinationIdentifier destinationPortal;
     [SerializeField] Transform spawnPoint;
 
@@ -16,7 +14,7 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
     {
         player.Character.Animator.IsMoving = false;
         this.player = player;
-        StartCoroutine(SwitchScene());
+        StartCoroutine(Teleport());
     }
 
     Fader fader;
@@ -26,27 +24,20 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
         fader = FindObjectOfType<Fader>();    
     }
 
-    IEnumerator SwitchScene()
+    IEnumerator Teleport()
     {
-        DontDestroyOnLoad(gameObject);
 
         GameController.Instance.PauseGame(true);
         yield return fader.FadeIn(0.5f);
 
-        yield return SceneManager.LoadSceneAsync(sceneToLoad);
-
-        var destPortal = FindObjectsOfType<Portal>().First(x => x != this && x.destinationPortal == this.destinationPortal);
+        var destPortal = FindObjectsOfType<LocationPortal>().First(x => x != this && x.destinationPortal == this.destinationPortal);
 
         player.Character.SetPositionAndSnapToTile(destPortal.SpawnPoint.position);
 
         yield return fader.FadeOut(0.5f);
         
         GameController.Instance.PauseGame(false);
-
-        Destroy(gameObject);
     }
 
     public Transform SpawnPoint => spawnPoint;
 }
-
-public enum DestinationIdentifier { A, B, C, D, E, F}
