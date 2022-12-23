@@ -8,18 +8,7 @@ Tile Based Movement.<br>
 Player Animation.<br>
 Collisions.<br>
 Battle System.<br>
-
-
-https://user-images.githubusercontent.com/103178006/207382530-d2c23998-9952-4df7-9421-a9981282b4eb.mov
-
-
 Critical Hits and Type Effectiveness.<br>
-
-
-
-https://user-images.githubusercontent.com/103178006/207382318-f36e0733-0db0-4c52-a309-94e6088f365a.mov
-
-
 Physical/Special Split.<br>
 Pokemon Party System.<br>
 Stat Boosting Moves.<br>
@@ -34,6 +23,14 @@ Running from Battle Mechanic. <br>
 Learning/Forgetting Moves on Level Up. <br>
 Additive Scene Loading. <br>
 Saving System. <br><br>
+
+https://user-images.githubusercontent.com/103178006/207382530-d2c23998-9952-4df7-9421-a9981282b4eb.mov
+
+
+
+
+
+https://user-images.githubusercontent.com/103178006/207382318-f36e0733-0db0-4c52-a309-94e6088f365a.mov
 
 
 More updates and videos are available on my <a href= https://www.linkedin.com/in/ewancruickshank91/>LinkedIn</a>
