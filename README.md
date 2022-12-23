@@ -31,7 +31,9 @@ Trainer Battles.<br>
 Catching Mechanic. <br>
 EXP Yield and Level Up Mechanic. <br>
 Running from Battle Mechanic. <br>
-Learning/Forgetting Moves on Level Up. <br><br>
+Learning/Forgetting Moves on Level Up. <br>
+Additive Scene Loading. <br>
+Saving System. <br><br>
 
 
 More updates and videos are available on my <a href= https://www.linkedin.com/in/ewancruickshank91/>LinkedIn</a>
