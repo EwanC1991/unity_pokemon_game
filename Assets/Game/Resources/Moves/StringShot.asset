@@ -10,11 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d59c98a5ea8d347a5824c20be9bd992b, type: 3}
-  m_Name: Move
+  m_Name: StringShot
   m_EditorClassIdentifier: 
-  name: Growl
+  name: String Shot
   description: 
-  type: 1
+  type: 7
   power: 0
   accuracy: 100
-  pp: 30
+  alwaysHits: 0
+  pp: 40
+  priority: 0
+  category: 2
+  effects:
+    boosts:
+    - stat: 4
+      boost: -1
+    status: 0
+    volatileStatus: 0
+  secondaries: []
+  target: 0
