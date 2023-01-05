@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class BattleDialogBox : MonoBehaviour
 {
     [SerializeField] int lettersPerSecond;
-    [SerializeField] Color highlightedColor;
     [SerializeField] Text dialogText;
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
@@ -22,6 +21,12 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] Text yesText;
     [SerializeField] Text noText;
 
+    Color highlightedColor;
+
+    private void Start() 
+    {
+        highlightedColor = GlobalSettings.i.HighlightedColor;    
+    }
 
     public void SetDialog(string dialog){
         dialogText.text = dialog;
