@@ -23,7 +23,8 @@ Running from Battle Mechanic. <br>
 Learning/Forgetting Moves on Level Up. <br>
 Additive Scene Loading. <br>
 Saving System. <br>
-Inventory System. <br><br>
+Inventory System. <br>
+Items (All Potions, Ethers, Status Healers) <br><br>
 
 https://user-images.githubusercontent.com/103178006/207382530-d2c23998-9952-4df7-9421-a9981282b4eb.mov
 
