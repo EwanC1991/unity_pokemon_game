@@ -12,15 +12,23 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Image itemIcon;
     [SerializeField] Text itemDescription;
 
+    [SerializeField] Image upArrow;
+    [SerializeField] Image downArrow;
+
+
     int selectedItem = 0;
+
+    const int itemsInViewPort = 8;
 
 
     List<ItemSlotUI> slotUIList;
     Inventory inventory;
+    RectTransform itemsListRect;
 
     private void Awake() 
     {
         inventory = Inventory.GetInventory();
+        itemsListRect = itemsList.GetComponent<RectTransform>();
     }
 
     private void Start() 
@@ -79,5 +87,20 @@ public class InventoryUI : MonoBehaviour
         var item = inventory.Slots[selectedItem].Item;
         itemIcon.sprite = item.Icon;
         itemDescription.text = item.Description;
+
+        HandleScrolling();
     }
+
+    void HandleScrolling()
+    {
+        float scrollPos = Mathf.Clamp(selectedItem - itemsInViewPort/2, 0, selectedItem) * slotUIList[0].Height;
+        itemsListRect.localPosition = new Vector2(itemsListRect.localPosition.x, scrollPos);
+
+        bool showUpArrow = selectedItem > itemsInViewPort/2;
+        upArrow.gameObject.SetActive(showUpArrow);
+        bool showDownArrow = selectedItem + itemsInViewPort/2 < slotUIList.Count;
+        downArrow.gameObject.SetActive(showDownArrow);
+    }   
 }
+
+
