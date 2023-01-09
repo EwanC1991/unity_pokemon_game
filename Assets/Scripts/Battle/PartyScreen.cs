@@ -28,6 +28,7 @@ public class PartyScreen : MonoBehaviour
         SetPartyData();
 
         party.OnUpdated += SetPartyData;
+
     }
 
     public void SetPartyData()
@@ -39,7 +40,7 @@ public class PartyScreen : MonoBehaviour
             if (i < pokemons.Count)
             {
                 memberSlots[i].gameObject.SetActive(true);
-                memberSlots[i].SetData(pokemons[i]);
+                memberSlots[i].Init(pokemons[i]);
             }
             else 
                 memberSlots[i].gameObject.SetActive(false);

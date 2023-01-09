@@ -38,6 +38,8 @@ public class InventoryUI : MonoBehaviour
     private void Start() 
     {
         UpdateItemList();
+
+        inventory.OnUpdated += UpdateItemList;
     }
 
     void UpdateItemList()
@@ -86,6 +88,8 @@ public class InventoryUI : MonoBehaviour
             Action onSelected = () => 
             {
                 // Use the item on the selected Pokemon
+                StartCoroutine(UseItem());
+
             };
 
             Action onBackPartyScreen = () =>
@@ -95,6 +99,24 @@ public class InventoryUI : MonoBehaviour
             };
             partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
         }
+    }
+
+    IEnumerator UseItem()
+    {
+        state = InventoryUIState.Busy;
+
+        var usedItem = inventory.UseUtem(selectedItem, partyScreen.SelectedMember);
+
+        if (usedItem != null)
+        {
+            yield return DialogManager.Instance.ShowDialogText($"The {usedItem.Name} healed {partyScreen.SelectedMember.Base.Name}");
+        }
+        else 
+        {
+            yield return DialogManager.Instance.ShowDialogText($"It won't have any effect!");
+        }
+
+        ClosePartyScreen();
     }
 
     void UpdateItemSelection()
