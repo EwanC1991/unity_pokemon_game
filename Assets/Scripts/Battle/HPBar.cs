@@ -8,7 +8,8 @@ public class HPBar : MonoBehaviour
 
     public bool IsUpdating { get; private set; }
 
-    public void SetHP(float hpNormalized){
+    public void SetHP(float hpNormalized)
+    {
         health.transform.localScale = new Vector3(hpNormalized, 1f);
     }
 
