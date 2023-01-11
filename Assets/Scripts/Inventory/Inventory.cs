@@ -7,19 +7,39 @@ using System.Linq;
 public class Inventory : MonoBehaviour
 {
    [SerializeField] List<ItemSlot> slots;
+   [SerializeField] List<ItemSlot> pokeballSlots;
+   [SerializeField] List<ItemSlot> tmSlots;
+
+   List<List<ItemSlot>> allSlots;
+
+   private void Awake() 
+   {
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
+   }
 
    public event Action OnUpdated;
 
-   public List<ItemSlot> Slots => slots;
-
-   public ItemBase UseUtem(int itemIndex, Pokemon selectedPokemon)
+   public static List<string> ItemCategories { get; set; } = new List<string>()
    {
-        var item = slots[itemIndex].Item;
+        "ITEMS", "BALLS", "TM's and HM's"
+   };
+
+   public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
+   {
+        return allSlots[categoryIndex];
+   }
+
+   public ItemBase UseUtem(int itemIndex, Pokemon selectedPokemon, int selectedCategory)
+   {
+
+        var currentSlots = GetSlotsByCategory(selectedCategory);
+
+        var item = currentSlots[itemIndex].Item;
         bool itemUsed = item.Use(selectedPokemon);
 
         if (itemUsed)
         {
-            RemoveItem(item);
+            RemoveItem(item, selectedCategory);
             return item;
         }
 
@@ -27,12 +47,14 @@ public class Inventory : MonoBehaviour
 
    }
 
-   public void RemoveItem(ItemBase item)
+   public void RemoveItem(ItemBase item, int category)
    {
-        var itemSlot = slots.First(slot => slot.Item == item);
+        var currentSlots = GetSlotsByCategory(category);
+
+        var itemSlot = currentSlots.First(slot => slot.Item == item);
         itemSlot.Count--;
         if (itemSlot.Count == 0)
-            slots.Remove(itemSlot);
+            currentSlots.Remove(itemSlot);
 
         OnUpdated?.Invoke();
    }

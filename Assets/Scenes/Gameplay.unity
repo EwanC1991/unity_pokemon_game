@@ -568,10 +568,10 @@ PrefabInstance:
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[0]._base
       value: 
-      objectReference: {fileID: 11400000, guid: 68ac712a80d0a4b58b6b4f32be5e301f, type: 2}
+      objectReference: {fileID: 11400000, guid: 89a755b5d075d430daed6e14fe796b66, type: 2}
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[1].level
@@ -613,14 +613,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: itemsList
-      value: 
-      objectReference: {fileID: 1169162578}
-    - target: {fileID: 0}
-      propertyPath: itemSlotUI
-      value: 
-      objectReference: {fileID: 3158011440035849231, guid: fb29e389423e64de5a17a09963abb969, type: 3}
     - target: {fileID: 2160441981346981293, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 600
@@ -1452,11 +1444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ddb908fa7c729419f05867d9550daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1169162578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6132157512823188123, guid: 7d171a952512b475f8699889110f32f4, type: 3}
-  m_PrefabInstance: {fileID: 683750424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305185688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3462285902507694555, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
