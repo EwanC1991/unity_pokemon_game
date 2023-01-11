@@ -7,10 +7,27 @@ using System.Linq;
 public class Inventory : MonoBehaviour
 {
    [SerializeField] List<ItemSlot> slots;
+   [SerializeField] List<ItemSlot> pokeballSlots;
+   [SerializeField] List<ItemSlot> tmSlots;
+
+   List<List<ItemSlot>> allSlots;
+
+   private void Awake() 
+   {
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
+   }
 
    public event Action OnUpdated;
 
-   public List<ItemSlot> Slots => slots;
+   public static List<string> ItemCategories { get; set; } = new List<string>()
+   {
+        "ITEMS", "BALLS", "TM's and HM's"
+   };
+
+   public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
+   {
+        return allSlots[categoryIndex];
+   }
 
    public ItemBase UseUtem(int itemIndex, Pokemon selectedPokemon)
    {
