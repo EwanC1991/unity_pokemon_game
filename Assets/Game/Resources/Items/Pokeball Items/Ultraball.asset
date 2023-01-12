@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ultraball
   description: A ball to capture Pokemon. It has a high catch rate.
-  icon: {fileID: 21300000, guid: 33e3bde62835b459f88045c970f5cd61, type: 3}
+  icon: {fileID: -2598005947579844795, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  catchRateModifier: 2
