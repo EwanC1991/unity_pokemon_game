@@ -120,8 +120,6 @@ public class BattleSystem : MonoBehaviour
     void ActionSelection(){
         state = BattleState.ActionSelection;
         StartCoroutine(dialogBox.TypeDialog("Choose an action"));
-        playerUnit.Hud.ClearData();
-        enemyUnit.Hud.ClearData();
         dialogBox.EnableActionSelector(true);
     }
 
@@ -129,6 +127,8 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.BattleOver;
         playerParty.Pokemons.ForEach(p => p.OnBattleOver());
+        playerUnit.Hud.ClearData();
+        enemyUnit.Hud.ClearData();
         OnBattleOver(won);
     }
 
@@ -395,7 +395,7 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
                             {
-                                playerUnit.Pokemon.LearnMove(newMove);
+                                playerUnit.Pokemon.LearnMove(newMove.Base);
                                 yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} learnt {newMove.Base.Name}!");
                                 dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
                             }
