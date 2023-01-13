@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19ac9798b94854f4e8bffdee8d6b5849, type: 3}
-  m_Name: TM01
+  m_Name: HM01
   m_EditorClassIdentifier: 
-  name: TM01
-  description: Teaches Flamethrower to a Pokemon
-  icon: {fileID: 21300000, guid: 7f7f2f5ebd0fe46ff83f23b7da596d52, type: 3}
-  move: {fileID: 11400000, guid: cc3fcbd920d7c454da9d24456b95512b, type: 2}
-  isHM: 0
+  name: HM01
+  description: Teaches Cut to a Pokemon
+  icon: {fileID: 21300000, guid: 001bde424ad584ee6b03ffc94bde90a6, type: 3}
+  move: {fileID: 11400000, guid: d175cb0d11ae540308cc53655f62c8d0, type: 2}
+  isHM: 1

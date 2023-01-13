@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TM02
   description: Teaches Sing to a Pokemon
-  icon: {fileID: 21300000, guid: 10c365287a65c4b4daf97fc035486881, type: 3}
+  icon: {fileID: 21300000, guid: 001bde424ad584ee6b03ffc94bde90a6, type: 3}
   move: {fileID: 11400000, guid: 356d1ebf7da6547939c426019ef2da7a, type: 2}
+  isHM: 0
