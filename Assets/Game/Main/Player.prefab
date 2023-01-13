@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pokemons:
   - _base: {fileID: 11400000, guid: a00e5248cbfdf4a609d53c10fc3cdac3, type: 2}
-    level: 12
+    level: 14
   - _base: {fileID: 11400000, guid: 89a755b5d075d430daed6e14fe796b66, type: 2}
     level: 20
   - _base: {fileID: 11400000, guid: daef7a0422dc8419f89118c6092d4347, type: 2}
@@ -286,7 +286,13 @@ MonoBehaviour:
     count: 7
   - item: {fileID: 11400000, guid: a3d495f4f730140cebd15ee8efd99b2f, type: 2}
     count: 5
-  tmSlots: []
+  tmSlots:
+  - item: {fileID: 11400000, guid: c1ca99ea4a2b145d381208a86f195c9a, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 5850083e17b8f4059b1b5de2bf258613, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: c44f8d6f7130b4b7fac7af1f408cae8d, type: 2}
+    count: 1
 --- !u!1 &8949384960378827045
 GameObject:
   m_ObjectHideFlags: 0

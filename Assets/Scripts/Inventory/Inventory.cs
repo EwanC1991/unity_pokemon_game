@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using System.Linq;
 
+public enum ItemCategory { Items, Pokeballs, TMs }
+
 public class Inventory : MonoBehaviour
 {
    [SerializeField] List<ItemSlot> slots;
@@ -29,18 +31,23 @@ public class Inventory : MonoBehaviour
         return allSlots[categoryIndex];
    }
 
+   public ItemBase GetItem(int itemIndex, int categoryIndex)
+   {
+          var currentSlots = GetSlotsByCategory(categoryIndex);
+          return currentSlots[itemIndex].Item;
+   }
+
    public ItemBase UseUtem(int itemIndex, Pokemon selectedPokemon, int selectedCategory)
    {
-
-        var currentSlots = GetSlotsByCategory(selectedCategory);
-
-        var item = currentSlots[itemIndex].Item;
+        var item = GetItem(itemIndex, selectedCategory);
         bool itemUsed = item.Use(selectedPokemon);
 
         if (itemUsed)
         {
-            RemoveItem(item, selectedCategory);
-            return item;
+          if (!item.IsReusable)
+               RemoveItem(item, selectedCategory);
+               
+          return item;
         }
 
         return null;
