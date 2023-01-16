@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour, Interactable
     
     public IEnumerator Interact(Transform initiator)
     {
+        
         if (!Used)
         {
             initiator.GetComponent<Inventory>().AddItem(item);
@@ -18,8 +19,10 @@ public class Pickup : MonoBehaviour, Interactable
 
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
+            
+            var player = initiator.GetComponent<PlayerController>();
 
-            yield return DialogManager.Instance.ShowDialogText($"You found {item.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{player.Name} picked up a {item.Name}");
         }
     }
 }
