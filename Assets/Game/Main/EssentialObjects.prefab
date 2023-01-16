@@ -3357,6 +3357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PartyScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1169706204295890618, guid: 1140709ffdd584b6ba133a3a58cface8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1140709ffdd584b6ba133a3a58cface8, type: 3}
 --- !u!114 &1660524288130036117 stripped
