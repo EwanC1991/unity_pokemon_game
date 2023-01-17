@@ -575,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a00e5248cbfdf4a609d53c10fc3cdac3, type: 2}
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 14
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[1].level
