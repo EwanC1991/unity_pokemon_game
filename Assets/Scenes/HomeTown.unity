@@ -7921,7 +7921,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5124735640647145824, guid: 62dbb99a03e0644c8800e0a391fab501, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5124735640647145824, guid: 62dbb99a03e0644c8800e0a391fab501, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8157,7 +8157,7 @@ Transform:
   - {fileID: 230373344}
   - {fileID: 470655562}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &973743359
 MonoBehaviour:
@@ -11427,7 +11427,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1288226409
 MonoBehaviour:
@@ -11474,6 +11474,10 @@ PrefabInstance:
     - target: {fileID: 955872275388735260, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: uniqueId
       value: bde29701-0087-4206-9ec0-140e7a5fc074
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: questToStart
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: dialog.lines.Array.size
@@ -11538,6 +11542,111 @@ PrefabInstance:
     - target: {fileID: 4722353693242449118, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: m_Name
       value: NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+--- !u!1001 &1665559340
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 623744199425199268, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 623744199425199268, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 623744199425199268, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 623744199425199268, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: I bought some Pokeballs from the next town.
+      objectReference: {fileID: 0}
+    - target: {fileID: 623744199425199268, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: You can have some!
+      objectReference: {fileID: 0}
+    - target: {fileID: 955872275388735260, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: uniqueId
+      value: 299202e3-91a5-4685-9815-a2b4d5c74231
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: questToStart
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c04a120b849e445ba6d89fc86494950, type: 2}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: You can use HM01 to teach a Pokemon Cut!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: 'You can find loads of cool Pokemon there! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: Use the Pokeballs I gave you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449116, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449118, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_Name
+      value: NPC Quest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
@@ -11835,7 +11944,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1078634139677293565, guid: b3d5df687243d49d9bee7ffb0dc1c1c4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1078634139677293565, guid: b3d5df687243d49d9bee7ffb0dc1c1c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11892,7 +12001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6203165689054775238, guid: d9103ef7554044eda9d53f55ef1bd61f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6203165689054775238, guid: d9103ef7554044eda9d53f55ef1bd61f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11938,6 +12047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 6203165689054775243, guid: d9103ef7554044eda9d53f55ef1bd61f, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 36e72c3419e3d4470a287825c8b4e288, type: 2}
     - target: {fileID: 6594499943559116322, guid: d9103ef7554044eda9d53f55ef1bd61f, type: 3}
       propertyPath: uniqueId
       value: ad395832-2b20-4476-a64e-e000b17c13c2
