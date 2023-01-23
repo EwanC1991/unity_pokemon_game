@@ -152,11 +152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines: []
-  movementPattern:
-  - {x: 0, y: 3}
-  - {x: 3, y: 0}
-  - {x: 0, y: -3}
-  - {x: -3, y: 0}
+  questToStart: {fileID: 0}
+  questToComplete: {fileID: 0}
+  movementPattern: []
   timeBetweenPattern: 3
 --- !u!114 &4722353693242449089
 MonoBehaviour:

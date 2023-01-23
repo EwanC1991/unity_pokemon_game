@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21676e1fb4c464b8aafeadd5a0473f8f, type: 3}
+  m_Name: FaintedPokemon
+  m_EditorClassIdentifier: 
+  name: FaintedPokemon
+  description: 
+  startDialogue:
+    lines:
+    - My Pokemon fainted and I don't have any revives
+    - Could you get me a revive? I have an item I could trade for it!
+  inProgressDialogue:
+    lines:
+    - Please bring me a revive!
+  completedDialogue:
+    lines:
+    - Oh you got it! You're a life saver!
+    - You can have this HM as a reward!
+  requiredItem: {fileID: 11400000, guid: 36e72c3419e3d4470a287825c8b4e288, type: 2}
+  rewardItem: {fileID: 11400000, guid: c44f8d6f7130b4b7fac7af1f408cae8d, type: 2}
