@@ -575,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a00e5248cbfdf4a609d53c10fc3cdac3, type: 2}
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1660524288385354309, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: pokemons.Array.data[1].level
@@ -679,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3247569062973987040, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: slots.Array.size
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3247569062973987040, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: slots.Array.data[4].item
@@ -721,6 +721,10 @@ PrefabInstance:
       propertyPath: slots.Array.data[13].item
       value: 
       objectReference: {fileID: 11400000, guid: 0a39013a5221a4a2c824f8b0e0eec1ce, type: 2}
+    - target: {fileID: 3247569062973987040, guid: 7d171a952512b475f8699889110f32f4, type: 3}
+      propertyPath: slots.Array.data[14].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6164c01ea698744779ca77efb6806705, type: 2}
     - target: {fileID: 3247569062973987040, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: slots.Array.data[4].count
       value: 4

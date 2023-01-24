@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution }
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
    GameState state;
 
    GameState prevState;
+   GameState stateBeforeEvolution;
 
    public SceneDetails CurrentScene { get; private set; }
 
@@ -64,6 +65,17 @@ public class GameController : MonoBehaviour
         };
 
         menuController.onMenuSelected += OnMenuSelected;
+
+        EvolutionManager.i.OnStartEvolution += () => 
+        {
+          stateBeforeEvolution = state;
+          state = GameState.Evolution;
+        };
+        EvolutionManager.i.OnCompleteEvolution += () => 
+        {
+          partyScreen.SetPartyData();
+          state = stateBeforeEvolution;
+        };
    }
 
    public void PauseGame(bool pause)
@@ -123,10 +135,15 @@ public class GameController : MonoBehaviour
           trainer.BattleLost();
           trainer = null;
      }
+
+     partyScreen.SetPartyData();
         
      state = GameState.FreeRoam;
      battleSystem.gameObject.SetActive(false);
      worldCamera.gameObject.SetActive(true);
+
+     var playerParty = playerController.GetComponent<PokemonParty>();
+     StartCoroutine(playerParty.CheckForEvolutions());
    }
 
    private void Update() 
