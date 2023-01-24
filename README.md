@@ -27,7 +27,8 @@ Inventory System. <br>
 Recovery Items (All Potions, Ethers, Status Healers) <br>
 TM/HM Items <br>
 Pokeball Items (PokeBall, Great Ball, Ultra Ball, Master Ball) <br>
-Quest System <br><br>
+Quest System <br>
+Evolutions (Level Up and Items) <br><br>
 
 https://user-images.githubusercontent.com/103178006/207382530-d2c23998-9952-4df7-9421-a9981282b4eb.mov
 
