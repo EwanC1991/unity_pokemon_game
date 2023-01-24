@@ -179,11 +179,32 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    
     IEnumerator UseItem()
     {
         state = InventoryUIState.Busy;
 
         yield return HandleTmItems();
+
+        var item = inventory.GetItem(selectedItem, selectedCategory);
+        var pokemon = partyScreen.SelectedMember;
+
+        // Handle Evolution Items
+        
+        if (item is EvolutionItem)
+        {
+            var evolution = pokemon.CheckForEvolution(item);
+            if (evolution != null)
+            {
+                yield return EvolutionManager.i.Evolve(pokemon, evolution);
+            }
+            else 
+            {
+                yield return DialogManager.Instance.ShowDialogText($"It won't have any effect!");
+                ClosePartyScreen();
+                yield break;
+            }
+        }
 
         var usedItem = inventory.UseUtem(selectedItem, partyScreen.SelectedMember, selectedCategory);
 

@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
    GameState state;
 
    GameState prevState;
+   GameState stateBeforeEvolution;
 
    public SceneDetails CurrentScene { get; private set; }
 
@@ -65,8 +66,12 @@ public class GameController : MonoBehaviour
 
         menuController.onMenuSelected += OnMenuSelected;
 
-        EvolutionManager.i.OnStartEvolution += () => state = GameState.Evolution;
-        EvolutionManager.i.OnCompleteEvolution += () => state = GameState.FreeRoam;
+        EvolutionManager.i.OnStartEvolution += () => 
+        {
+          stateBeforeEvolution = state;
+          state = GameState.Evolution;
+        };
+        EvolutionManager.i.OnCompleteEvolution += () => state = stateBeforeEvolution;
    }
 
    public void PauseGame(bool pause)

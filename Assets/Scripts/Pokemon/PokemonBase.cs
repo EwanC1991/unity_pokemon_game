@@ -177,9 +177,12 @@ public class Evolution
 {
     [SerializeField] PokemonBase evolesInto;
     [SerializeField] int requiredLevel;
+    [SerializeField] EvolutionItem requiredItem;
 
     public PokemonBase EvolvesInto => evolesInto;
     public int RequiredLevel => requiredLevel;
+
+    public EvolutionItem RequiredItem => requiredItem;
 }
 
 
