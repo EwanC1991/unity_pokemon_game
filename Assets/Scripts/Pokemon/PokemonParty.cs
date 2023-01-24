@@ -62,8 +62,6 @@ public class PokemonParty : MonoBehaviour
                 
             }
         }
-
-        OnUpdated?.Invoke();
     }
 
     public static PokemonParty GetPlayerParty()
