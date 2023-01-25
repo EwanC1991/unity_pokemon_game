@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e570a50e06f9461c901177ae3931371, type: 3}
+  m_Name: Pidgeot
+  m_EditorClassIdentifier: 
+  name: Pidgeot
+  description: 
+  frontSprite: {fileID: 21300000, guid: dcaf2c40e1d654035b06802ce881a57e, type: 3}
+  backSprite: {fileID: 21300000, guid: 81902f174f97c4ceb8803e5f669a018d, type: 3}
+  type1: 1
+  type2: 3
+  maxHp: 83
+  attack: 80
+  defense: 75
+  spAttack: 70
+  spDefense: 70
+  speed: 101
+  expYield: 0
+  growthRate: 0
+  catchRate: 255
+  learnableMoves: []
+  learnableByItems: []
+  evolutions: []

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e570a50e06f9461c901177ae3931371, type: 3}
+  m_Name: Spearow
+  m_EditorClassIdentifier: 
+  name: Spearow
+  description: 
+  frontSprite: {fileID: 21300000, guid: 259939661a68842db9ac33f1f822120f, type: 3}
+  backSprite: {fileID: 21300000, guid: bc552efb2504b414496aeb83ee6775f6, type: 3}
+  type1: 1
+  type2: 3
+  maxHp: 40
+  attack: 60
+  defense: 30
+  spAttack: 31
+  spDefense: 31
+  speed: 70
+  expYield: 0
+  growthRate: 0
+  catchRate: 255
+  learnableMoves: []
+  learnableByItems: []
+  evolutions: []

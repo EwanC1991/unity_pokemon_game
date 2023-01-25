@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e570a50e06f9461c901177ae3931371, type: 3}
+  m_Name: Growlithe
+  m_EditorClassIdentifier: 
+  name: Growlithe
+  description: 
+  frontSprite: {fileID: 21300000, guid: 67223aa8f5af14cf585d996ce70ae86b, type: 3}
+  backSprite: {fileID: 21300000, guid: 9aa9ccf121f51446d99a2db784e15d21, type: 3}
+  type1: 10
+  type2: 0
+  maxHp: 55
+  attack: 70
+  defense: 45
+  spAttack: 70
+  spDefense: 50
+  speed: 60
+  expYield: 0
+  growthRate: 0
+  catchRate: 255
+  learnableMoves: []
+  learnableByItems: []
+  evolutions: []
