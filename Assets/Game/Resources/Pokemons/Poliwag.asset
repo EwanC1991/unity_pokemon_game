@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e570a50e06f9461c901177ae3931371, type: 3}
+  m_Name: Poliwag
+  m_EditorClassIdentifier: 
+  name: Poliwag
+  description: 
+  frontSprite: {fileID: 21300000, guid: a710c035851e4485483eb17088e9e9e9, type: 3}
+  backSprite: {fileID: 21300000, guid: 517c4143c672143368c0bffe4b197d7a, type: 3}
+  type1: 11
+  type2: 0
+  maxHp: 40
+  attack: 50
+  defense: 40
+  spAttack: 40
+  spDefense: 40
+  speed: 90
+  expYield: 0
+  growthRate: 0
+  catchRate: 255
+  learnableMoves: []
+  learnableByItems: []
+  evolutions: []

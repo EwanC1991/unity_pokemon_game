@@ -26,5 +26,10 @@ MonoBehaviour:
   speed: 60
   expYield: 142
   growthRate: 3
-  catchRate: 255
+  catchRate: 45
   learnableMoves: []
+  learnableByItems: []
+  evolutions:
+  - evolesInto: {fileID: 11400000, guid: 347d00427f0c54bad9612e5a8e6fc143, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}

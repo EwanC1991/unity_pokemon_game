@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using DG.Tweening;
 
 public class EvolutionManager : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class EvolutionManager : MonoBehaviour
 
     private void Awake() 
     {
-        i = this;    
+        i = this;
     }
+
+    
 
     public IEnumerator Evolve(Pokemon pokemon, Evolution evolution)
     {
@@ -25,13 +28,15 @@ public class EvolutionManager : MonoBehaviour
         evolutionUI.SetActive(true);
 
         pokemonImage.sprite = pokemon.Base.FrontSprite;
-        yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} is evolving");
+        yield return DialogManager.Instance.ShowDialogText($"What? {pokemon.Base.Name} is evolving!");
 
         var oldPokemon = pokemon.Base;
         pokemon.Evolve(evolution);
+    
+        
 
         pokemonImage.sprite = pokemon.Base.FrontSprite;
-        yield return DialogManager.Instance.ShowDialogText($"{oldPokemon.Name} evolved into {pokemon.Base.Name}");
+        yield return DialogManager.Instance.ShowDialogText($"{oldPokemon.Name} evolved into {pokemon.Base.Name}!");
 
         evolutionUI.SetActive(false);
 

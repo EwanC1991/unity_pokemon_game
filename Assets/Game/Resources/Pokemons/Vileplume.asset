@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e570a50e06f9461c901177ae3931371, type: 3}
+  m_Name: Vileplume
+  m_EditorClassIdentifier: 
+  name: Vileplume
+  description: 
+  frontSprite: {fileID: 21300000, guid: 9cbf1676f66474a05987b998d43f2abf, type: 3}
+  backSprite: {fileID: 21300000, guid: 857228be42deb46039319863bca11b1d, type: 3}
+  type1: 12
+  type2: 4
+  maxHp: 75
+  attack: 80
+  defense: 85
+  spAttack: 110
+  spDefense: 90
+  speed: 50
+  expYield: 0
+  growthRate: 0
+  catchRate: 255
+  learnableMoves: []
+  learnableByItems: []
+  evolutions: []
