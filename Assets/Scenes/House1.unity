@@ -136,8 +136,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: defaultDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkUpSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -1184166576, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkUpSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -486265649, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkUpSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -722567536, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkUpSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 926090186, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkDownSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -1143133692, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkDownSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -980630866, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkDownSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -1409565434, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkDownSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1957408851, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkLeftSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 270239599, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkLeftSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1387221503, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkLeftSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -2102196818, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkLeftSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 1060127400, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkRightSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 858440372, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkRightSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1694935133, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkRightSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -1865817895, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
+    - target: {fileID: 4722353693242449088, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: walkRightSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 1384124422, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
     - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: questToComplete
       value: 
@@ -198,6 +262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4722353693242449119, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1143133692, guid: 76ce316eb89ef4a878bf6095529ff446, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
 --- !u!1 &644230731 stripped
@@ -222,7 +290,8 @@ MonoBehaviour:
     level: 5
   dialog:
     lines:
-    - It's not safe to go out of town without a Pokemon!
+    - Pleased to meet you, I'm the Professor!
+    - You want to go on a adventure? You'll need a Pokemon for that!
     - Here, you can have this one!
 --- !u!1001 &864427250
 PrefabInstance:

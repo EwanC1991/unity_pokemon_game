@@ -229,32 +229,10 @@ public class GameController : MonoBehaviour
       {
           // Load 1
           SavingSystem.i.Load("saveSlot1");
+          partyScreen.SetPartyData();
           state = GameState.FreeRoam;
       }
-      else if (selectedItem == 4)
-      {
-          // Save 2
-          SavingSystem.i.Save("saveSlot2");
-          state = GameState.FreeRoam;
-      }
-      else if (selectedItem == 5)
-      {
-          // Load 2
-          SavingSystem.i.Load("saveSlot2");
-          state = GameState.FreeRoam;
-      }
-      else if (selectedItem == 6)
-      {
-          // Save 3
-          SavingSystem.i.Save("saveSlot3");
-          state = GameState.FreeRoam;
-      }
-      else if (selectedItem == 7)
-      {
-          // Load 3
-          SavingSystem.i.Load("saveSlot3");
-          state = GameState.FreeRoam;
-      }
+    
       
       
    }

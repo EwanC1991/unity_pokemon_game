@@ -33,13 +33,14 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 9f601a896c5004e5ea854c089f62f955, type: 2}
     level: 4
   - moveBase: {fileID: 11400000, guid: 77140b8b92c77496a85acb639811c860, type: 2}
-    level: 7
+    level: 5
   - moveBase: {fileID: 11400000, guid: 4bac670a2c8dd411eb0e076b4de63b3a, type: 2}
     level: 7
   - moveBase: {fileID: 11400000, guid: cc3fcbd920d7c454da9d24456b95512b, type: 2}
     level: 13
   learnableByItems:
   - {fileID: 11400000, guid: d175cb0d11ae540308cc53655f62c8d0, type: 2}
+  - {fileID: 11400000, guid: 2ccbe34b0af5d4142823256a4cfbfdd0, type: 2}
   evolutions:
   - evolesInto: {fileID: 11400000, guid: 5b4731c1e4c3a4090a55a7a8d7391f56, type: 2}
     requiredLevel: 16
