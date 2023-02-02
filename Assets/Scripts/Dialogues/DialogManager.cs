@@ -7,6 +7,7 @@ using System;
 public class DialogManager : MonoBehaviour
 {
    [SerializeField] GameObject dialogBox;
+   [SerializeField] ChoiceBox choiceBox;
    [SerializeField] Text dialogText;
    [SerializeField] int lettersPerSecond;
 
@@ -48,7 +49,7 @@ public class DialogManager : MonoBehaviour
         IsShowing = false;
     }
 
-   public IEnumerator ShowDialog(Dialog dialog)
+   public IEnumerator ShowDialog(Dialog dialog, List<string> choices=null, Action<int> onChoiceSelected=null)
    {
         yield return  new WaitForEndOfFrame();
 
@@ -60,6 +61,11 @@ public class DialogManager : MonoBehaviour
         {
             yield return TypeDialog(line);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
+        }
+
+        if (choices != null && choices.Count > 1)
+        {
+            yield return choiceBox.ShowChoices(choices, onChoiceSelected);
         }
 
         dialogBox.SetActive(false);
