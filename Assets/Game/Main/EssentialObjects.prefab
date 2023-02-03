@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 131837342963070670}
+  shopUI: {fileID: 4434488440763832335}
   walletUI: {fileID: 8428079616864095944}
   countSelectorUI: {fileID: 4020960607710645422}
 --- !u!1 &1660524286920034692
@@ -4733,6 +4734,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fd8436b1dd764cac856455d0832beba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4434488440763832335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1670434081431688222, guid: 850e3dfcafccd48d3b399b210773cb9b, type: 3}
+  m_PrefabInstance: {fileID: 3072832976128363537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda80fbb9b7834c48bcbb2a816e7a3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6427380123495132553 stripped
