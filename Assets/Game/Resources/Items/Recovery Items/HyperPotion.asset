@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Hyper Potion
   description: Recovers a Pokemon's HP by 120 points
   icon: {fileID: 21300000, guid: 37578f6fadf4c4d4e84f3646601910e5, type: 3}
+  price: 1200
+  isSellable: 1
   hpAmount: 120
   restoreMaxHP: 0
   ppAmount: 0
