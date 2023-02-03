@@ -1775,19 +1775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cfaae0d1387d4b2cae02333f94488e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &683750435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683750425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62629ac10474349d79c3e092320fe712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 1569574685}
 --- !u!1 &1305185688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3462285902507694555, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
@@ -1808,17 +1795,6 @@ MonoBehaviour:
   wildPokemons:
   - _base: {fileID: 11400000, guid: daef7a0422dc8419f89118c6092d4347, type: 2}
     level: 5
---- !u!114 &1569574685 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 131837342963070670, guid: 7d171a952512b475f8699889110f32f4, type: 3}
-  m_PrefabInstance: {fileID: 683750424}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd0c621b13a14879a4b671245550df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7928641046678689783
 PrefabInstance:
   m_ObjectHideFlags: 0

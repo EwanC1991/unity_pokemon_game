@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 8657813882411623076}
   - component: {fileID: 8517951927428701693}
   - component: {fileID: 1505841264050945674}
+  - component: {fileID: 8558811997039094414}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1660524288376415464}
+  choiceBox: {fileID: 0}
   dialogText: {fileID: 1660524287471763234}
   lettersPerSecond: 45
 --- !u!114 &1660524286898971234
@@ -423,6 +425,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evolutionUI: {fileID: 3528831609546928165}
   pokemonImage: {fileID: 2787898911531715917}
+--- !u!114 &8558811997039094414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660524286898971238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62629ac10474349d79c3e092320fe712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 131837342963070670}
+  walletUI: {fileID: 8428079616864095944}
 --- !u!1 &1660524286920034692
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,6 +4684,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f55a0053d7174dc4b73dc2648d406ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8428079616864095944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6796609748257587929, guid: 850e3dfcafccd48d3b399b210773cb9b, type: 3}
+  m_PrefabInstance: {fileID: 3072832976128363537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54b5b75f06af4b98b263062e580847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8654726121553018934 stripped
