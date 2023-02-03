@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Ice Heal
   description: 'Cures a Frozen Pokemon '
   icon: {fileID: 21300000, guid: 810c95f4becb54e9fbc34341ce210804, type: 3}
+  price: 300
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0
