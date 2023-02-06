@@ -7,6 +7,7 @@ using System;
 public enum ShopState { Menu, Buying, Selling, Busy }
 public class ShopController : MonoBehaviour
 {
+    [SerializeField] Vector2 shopCameraOffset;
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] ShopUI shopUI;
     [SerializeField] WalletUI walletUI;
@@ -44,7 +45,7 @@ public class ShopController : MonoBehaviour
         state = ShopState.Menu;
 
         int selectedChoice = 0;
-        yield return DialogManager.Instance.ShowDialogText("How many I serve you?",
+        yield return DialogManager.Instance.ShowDialogText("How may I serve you?",
             waitForInput: false,
             choices: new List<string>() { "Buy", "Sell", "Quit" },
             onChoiceSelected: choiceIndex => selectedChoice = choiceIndex);
@@ -52,9 +53,13 @@ public class ShopController : MonoBehaviour
         if (selectedChoice == 0)
         {
             // Buy
-            state = ShopState.Buying;
+            
+            yield return GameController.Instance.MoveCamera(shopCameraOffset);
             walletUI.Show();
-            shopUI.Show(merchant.Availableitems);
+            shopUI.Show(merchant.Availableitems, (item) => StartCoroutine(BuyItem(item)), 
+                () => StartCoroutine(OnBackFromBuying()));
+
+            state = ShopState.Buying;
         }
         else if (selectedChoice == 1)
         {
@@ -140,5 +145,55 @@ public class ShopController : MonoBehaviour
         
 
 
+    }
+
+    IEnumerator BuyItem(ItemBase item)
+    {
+        state = ShopState.Busy;
+
+        yield return DialogManager.Instance.ShowDialogText($"How many would you like?",
+            waitForInput: false, autoClose: false);
+        
+        int countToBuy = 1;
+
+        yield return countSelectorUI.ShowSelector(100, item.Price, 
+            (selectedCount) => countToBuy = selectedCount);
+
+        DialogManager.Instance.CloseDialog();
+
+        float totalPrice = item.Price * countToBuy;
+
+        if (Wallet.i.HasMoney(totalPrice))
+        {
+            int selectedChoice = 0;
+            yield return DialogManager.Instance.ShowDialogText($"That'll be £{totalPrice}",
+                waitForInput: false,
+                choices: new List<string>() { "Yes", "No" },
+                onChoiceSelected: choiceIndex => selectedChoice = choiceIndex);
+
+            if (selectedChoice == 0)
+            {
+                // Selected Yes
+                inventory.AddItem(item, countToBuy);
+                Wallet.i.TakeMoney(totalPrice);
+                yield return DialogManager.Instance.ShowDialogText("Thank you for shopping with us! We hope you have a nice day!");
+            }
+
+        }
+        else 
+        {
+            yield return DialogManager.Instance.ShowDialogText($"You don't have enough money for that!");
+        }
+
+        state = ShopState.Buying;
+
+    }
+
+    IEnumerator OnBackFromBuying()
+    {
+        yield return GameController.Instance.MoveCamera(-shopCameraOffset);
+        shopUI.Close();
+        walletUI.Close();
+        StartCoroutine(StartMenuState());
     }
 }
