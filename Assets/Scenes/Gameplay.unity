@@ -1605,6 +1605,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4819774584751219071, guid: 7d171a952512b475f8699889110f32f4, type: 3}
+      propertyPath: sfxList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819774584751219071, guid: 7d171a952512b475f8699889110f32f4, type: 3}
+      propertyPath: sfxList.Array.data[1].id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819774584751219071, guid: 7d171a952512b475f8699889110f32f4, type: 3}
+      propertyPath: sfxList.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 90edacb0f21cb4b8cb2cdbd8c96b70ec, type: 3}
+    - target: {fileID: 4819774584751219071, guid: 7d171a952512b475f8699889110f32f4, type: 3}
+      propertyPath: sfxList.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4fa8fcce615a645d28547478f09f759a, type: 3}
     - target: {fileID: 4866779133199691466, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

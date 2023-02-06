@@ -174,6 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc979534b7064b34a66da01ece1876d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxList:
+  - id: 0
+    clip: {fileID: 8300000, guid: 90edacb0f21cb4b8cb2cdbd8c96b70ec, type: 3}
+  - id: 1
+    clip: {fileID: 8300000, guid: 4fa8fcce615a645d28547478f09f759a, type: 3}
   musicPlayer: {fileID: 6570242214510719772}
   sfxPlayer: {fileID: 4041324949130566768}
   fadeDuration: 0.75
@@ -3525,7 +3530,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
