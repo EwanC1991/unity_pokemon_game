@@ -151,6 +151,10 @@ PrefabInstance:
       value: House1
       objectReference: {fileID: 0}
     - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 9171f7f18203143acacdaa6ba11ce9fe, type: 3}
+    - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -234,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Route1
       objectReference: {fileID: 0}
+    - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 3de5788175769448097c9090260ff3e0, type: 3}
     - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 2
@@ -322,6 +330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Town2
       objectReference: {fileID: 0}
+    - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 0709e07a653284ef78e8094b17fc5fc8, type: 3}
     - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 1
@@ -1997,6 +2009,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 6570242214510719772, guid: 7d171a952512b475f8699889110f32f4, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6571415955493634817, guid: 7d171a952512b475f8699889110f32f4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2822,6 +2838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HomeTown
       objectReference: {fileID: 0}
+    - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: adc112309d3be423181ee6b058437b07, type: 3}
     - target: {fileID: 6857036287025562780, guid: b33c6f4c9770b4692bf06b2c239bdf08, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 2
