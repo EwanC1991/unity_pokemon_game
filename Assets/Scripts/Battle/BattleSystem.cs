@@ -767,21 +767,25 @@ public class BattleSystem : MonoBehaviour
         pokeball.sprite = pokeballItem.Icon;
 
         // Animations
+        AudioManager.i.PlaySfx(AudioId.ThrowPokeBall);
         yield return pokeball.transform.DOJump(enemyUnit.transform.position + new Vector3(0, 2), 2f, 1, 1f).WaitForCompletion();
         yield return enemyUnit.PlayCaptureAnimation();
         yield return pokeball.transform.DOMoveY(enemyUnit.transform.position.y - 1.3f, 0.5f).WaitForCompletion();
+        AudioManager.i.PlaySfx(AudioId.BallDrop);
 
         int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon, pokeballItem);
 
         for (int i =0; i<Mathf.Min(shakeCount, 3); i++)
         {
             yield return new WaitForSeconds(0.5f);
+            AudioManager.i.PlaySfx(AudioId.BallShake);
             yield return pokeball.transform.DOPunchRotation(new Vector3(0, 0, 10f), 0.8f).WaitForCompletion();
         }
 
         if (shakeCount == 4)
         {
             // Pokemon is caught 
+            AudioManager.i.PlaySfx(AudioId.PokemonObtained, pauseMusic: true);
             yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} was caught");
             yield return pokeball.DOFade(0, 1.5f).WaitForCompletion();
 
