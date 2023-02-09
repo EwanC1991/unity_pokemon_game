@@ -2906,6 +2906,7 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: 68ac712a80d0a4b58b6b4f32be5e301f, type: 2}
     levelRange: {x: 4, y: 6}
     chancePercentage: 20
+  totalChance: 100
 --- !u!1001 &7928641046678689783
 PrefabInstance:
   m_ObjectHideFlags: 0
