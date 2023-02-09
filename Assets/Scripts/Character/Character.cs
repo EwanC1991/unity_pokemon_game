@@ -34,6 +34,13 @@ public class Character : MonoBehaviour
         targetPos.x += moveVec.x;
         targetPos.y += moveVec.y;
 
+        var ledge = CheckForLedge(targetPos);
+        if (ledge != null)
+        {
+            if (ledge.TryToJump(this, moveVec))
+                yield break;
+        }
+
         if (!IsPathClear(targetPos))
             yield break;
 
@@ -71,6 +78,12 @@ public class Character : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    Ledge CheckForLedge(Vector3 targetPos)
+    {
+        var collider = Physics2D.OverlapCircle(targetPos, 0.15f, GameLayers.i.LedgesLayer);
+        return collider?.GetComponent<Ledge>();
     }
 
 

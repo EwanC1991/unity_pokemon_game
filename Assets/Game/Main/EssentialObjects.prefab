@@ -179,6 +179,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 90edacb0f21cb4b8cb2cdbd8c96b70ec, type: 3}
   - id: 1
     clip: {fileID: 8300000, guid: 4fa8fcce615a645d28547478f09f759a, type: 3}
+  - id: 4
+    clip: {fileID: 8300000, guid: 8a1e9b54efcc0431ab1b6ee1172d83cc, type: 3}
+  - id: 5
+    clip: {fileID: 8300000, guid: b79ed5f6c25934fed9ea6a92bc39f602, type: 3}
   musicPlayer: {fileID: 6570242214510719772}
   sfxPlayer: {fileID: 4041324949130566768}
   fadeDuration: 0.75
@@ -568,6 +572,9 @@ MonoBehaviour:
   triggersLayer:
     serializedVersion: 2
     m_Bits: 16384
+  ledgesLayer:
+    serializedVersion: 2
+    m_Bits: 32768
 --- !u!114 &8657813882411623076
 MonoBehaviour:
   m_ObjectHideFlags: 0
