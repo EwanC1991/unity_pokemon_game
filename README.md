@@ -31,7 +31,9 @@ Quest System <br>
 Evolutions (Level Up and Items) <br>
 Healer NPCs <br>
 Dialogue Choices <br>
-Shops <br><br>
+Shops <br>
+Audio System <br>
+Surf Mechanic <br><br>
 
 https://user-images.githubusercontent.com/103178006/207382530-d2c23998-9952-4df7-9421-a9981282b4eb.mov
 
