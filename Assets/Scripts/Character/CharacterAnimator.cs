@@ -9,6 +9,7 @@ public class CharacterAnimator : MonoBehaviour
     [SerializeField] List<Sprite> walkUpSprites;
     [SerializeField] List<Sprite> walkRightSprites;
     [SerializeField] List<Sprite> walkLeftSprites;
+    [SerializeField] List<Sprite> surfSprites;
     [SerializeField] FacingDirection defaultDirection = FacingDirection.Down; 
 
     // Parameters
@@ -17,6 +18,8 @@ public class CharacterAnimator : MonoBehaviour
     public float MoveY { get; set; }
     public bool IsMoving { get; set; }
     public bool IsJumping { get; set; }
+
+    public bool IsSurfing { get; set; }
 
 
 
@@ -49,7 +52,9 @@ public class CharacterAnimator : MonoBehaviour
     {
         var prevAnim = currentAnim;
 
-        if (MoveX == 1)
+        if (!IsSurfing)
+        {
+            if (MoveX == 1)
             currentAnim = walkRightAnim;
         else if (MoveX == -1)
             currentAnim = walkLeftAnim;
@@ -67,6 +72,21 @@ public class CharacterAnimator : MonoBehaviour
             currentAnim.HandleUpdate();
         else
             spriteRenderer.sprite = currentAnim.Frames[0];
+
+        }
+        else 
+        {
+            if (MoveX == 1)
+            spriteRenderer.sprite = surfSprites[2];
+        else if (MoveX == -1)
+            spriteRenderer.sprite = surfSprites[3];
+        else if (MoveY == 1)
+            spriteRenderer.sprite = surfSprites[1];
+        else if (MoveY == -1)
+            spriteRenderer.sprite = surfSprites[0];
+        }
+
+        
 
         wasPreviouslyMoving = IsMoving;
     }
