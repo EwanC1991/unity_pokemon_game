@@ -6,9 +6,13 @@ using System.Linq;
 public class MapArea : MonoBehaviour
 {
     [SerializeField] List<PokemonEncounterRecord> wildPokemons;
+    [SerializeField] List<PokemonEncounterRecord> wildPokemonsInWater;
 
     [HideInInspector]
     [SerializeField] int totalChance = 0;
+
+    [HideInInspector]
+    [SerializeField] int totalChanceInWater = 0;
 
     private void OnValidate() 
     {
@@ -20,6 +24,15 @@ public class MapArea : MonoBehaviour
 
             totalChance = totalChance + record.chancePercentage;
         }
+
+        totalChanceInWater = 0;
+        foreach (var record in wildPokemonsInWater)
+        {
+            record.changeLower = totalChanceInWater;
+            record.chanceUpper = totalChanceInWater + record.chancePercentage;
+
+            totalChanceInWater = totalChanceInWater + record.chancePercentage;
+        }
     }
 
     private void Start() 
@@ -27,10 +40,11 @@ public class MapArea : MonoBehaviour
 
     }
 
-    public Pokemon GetRandomWildPokemon()
+    public Pokemon GetRandomWildPokemon(BattleTrigger trigger)
     {
+        var pokemonList = (trigger == BattleTrigger.LongGrass) ? wildPokemons : wildPokemonsInWater; 
         int randVal = Random.Range(1, 101);
-        var pokemonRecord = wildPokemons.First(p => randVal >= p.changeLower && randVal <= p.chanceUpper);
+        var pokemonRecord = pokemonList.First(p => randVal >= p.changeLower && randVal <= p.chanceUpper);
 
         var levelRange = pokemonRecord.levelRange;
         int level = levelRange.y == 0 ? levelRange.x : Random.Range(levelRange.x, levelRange.y+1);

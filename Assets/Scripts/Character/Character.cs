@@ -44,7 +44,8 @@ public class Character : MonoBehaviour
         if (!IsPathClear(targetPos))
             yield break;
 
-        if (animator.IsSurfing && Physics2D.OverlapCircle(targetPos, 0.3f, GameLayers.i.WaterLayer) == null)
+        Vector2 pos = new Vector2(targetPos.x, targetPos.y - OffsetY);
+        if (animator.IsSurfing && Physics2D.OverlapCircle(pos, 0.3f, GameLayers.i.WaterLayer) == null)
             animator.IsSurfing = false;
 
         IsMoving = true;

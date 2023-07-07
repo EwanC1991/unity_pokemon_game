@@ -9,16 +9,24 @@ using System.Linq;
 public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, Bag, PartyScreen, AboutToUse, MoveToForget, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 
+public enum BattleTrigger { LongGrass, Water }
+
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
-
     [SerializeField] BattleUnit enemyUnit;
+
     [SerializeField] BattleDialogBox dialogBox;
+
     [SerializeField] PartyScreen partyScreen;
+
     [SerializeField] Image playerImage;
     [SerializeField] Image trainerImage;
+
+
     [SerializeField] GameObject pokeballSprite;
+
+    [Header("UI")]
     [SerializeField] MoveSelectionUI moveSelectionUI;
     [SerializeField] InventoryUI inventoryUI;
 
