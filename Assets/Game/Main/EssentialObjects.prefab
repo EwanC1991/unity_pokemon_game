@@ -575,6 +575,9 @@ MonoBehaviour:
   ledgesLayer:
     serializedVersion: 2
     m_Bits: 32768
+  waterLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &8657813882411623076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2939,6 +2942,9 @@ MonoBehaviour:
   wildBattleMusic: {fileID: 8300000, guid: c63577b2a4eaa4fdda5b05b00f908d88, type: 3}
   trainerBattleMusic: {fileID: 8300000, guid: f8dd8eff740054411b15a6e8617ac595, type: 3}
   battleVictoryMusic: {fileID: 8300000, guid: 210eb05fd85c34919a14d35e9afb6582, type: 3}
+  backgroundImage: {fileID: 1660524287518821256}
+  grassBackground: {fileID: 4422032505096542742, guid: 5e92e4381a92d5649bd2246f7decdb7b, type: 3}
+  waterBackground: {fileID: 1106511937541109406, guid: 5e92e4381a92d5649bd2246f7decdb7b, type: 3}
 --- !u!1 &1660524288496234254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,6 +3911,10 @@ PrefabInstance:
     - target: {fileID: 626616561435250624, guid: 850e3dfcafccd48d3b399b210773cb9b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034877389500328972, guid: 850e3dfcafccd48d3b399b210773cb9b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.875
       objectReference: {fileID: 0}
     - target: {fileID: 1315280526537365329, guid: 850e3dfcafccd48d3b399b210773cb9b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5104,6 +5114,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1660524287744740786}
     m_Modifications:
+    - target: {fileID: 2989301276031682219, guid: cd79496e0454e4303a5f0da0d7ee8057, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -54.399994
+      objectReference: {fileID: 0}
     - target: {fileID: 3923671238381247152, guid: cd79496e0454e4303a5f0da0d7ee8057, type: 3}
       propertyPath: m_Name
       value: InventoryUI
@@ -5195,6 +5209,10 @@ PrefabInstance:
     - target: {fileID: 5143010899510816312, guid: cd79496e0454e4303a5f0da0d7ee8057, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566196485600821009, guid: cd79496e0454e4303a5f0da0d7ee8057, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -228.37158
       objectReference: {fileID: 0}
     - target: {fileID: 6892813728155633961, guid: cd79496e0454e4303a5f0da0d7ee8057, type: 3}
       propertyPath: partyScreen

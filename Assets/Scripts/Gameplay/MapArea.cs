@@ -14,30 +14,45 @@ public class MapArea : MonoBehaviour
     [HideInInspector]
     [SerializeField] int totalChanceInWater = 0;
 
-    private void OnValidate() 
+    private void OnValidate()
     {
-        totalChance = 0;
-        foreach (var record in wildPokemons)
-        {
-            record.changeLower = totalChance;
-            record.chanceUpper = totalChance + record.chancePercentage;
-
-            totalChance = totalChance + record.chancePercentage;
-        }
-
-        totalChanceInWater = 0;
-        foreach (var record in wildPokemonsInWater)
-        {
-            record.changeLower = totalChanceInWater;
-            record.chanceUpper = totalChanceInWater + record.chancePercentage;
-
-            totalChanceInWater = totalChanceInWater + record.chancePercentage;
-        }
+        CalculatePercentage();
     }
 
     private void Start() 
     {
+        CalculatePercentage();
+    }
 
+    void CalculatePercentage()
+    {
+        totalChance = -1;
+        totalChanceInWater = -1;
+
+        if (wildPokemons.Count > 0)
+        {
+            totalChance = 0;
+            foreach (var record in wildPokemons)
+            {
+                record.changeLower = totalChance;
+                record.chanceUpper = totalChance + record.chancePercentage;
+
+                totalChance = totalChance + record.chancePercentage;
+            }
+
+        }
+
+        if (wildPokemonsInWater.Count > 0)
+        {
+            totalChanceInWater = 0;
+            foreach (var record in wildPokemonsInWater)
+            {
+                record.changeLower = totalChanceInWater;
+                record.chanceUpper = totalChanceInWater + record.chancePercentage;
+
+                totalChanceInWater = totalChanceInWater + record.chancePercentage;
+            }
+        }
     }
 
     public Pokemon GetRandomWildPokemon(BattleTrigger trigger)
