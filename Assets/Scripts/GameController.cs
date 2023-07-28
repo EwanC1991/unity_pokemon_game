@@ -96,6 +96,16 @@ public class GameController : MonoBehaviour
         }
    }
 
+    public void StartCutsceneState()
+    {
+        state = GameState.Cutscene;
+    }
+
+    public void StartFreeRoamState()
+    {
+        state = GameState.FreeRoam;
+    }
+
    public void StartBattle(BattleTrigger trigger) 
    {
         state = GameState.Battle;
@@ -161,13 +171,17 @@ public class GameController : MonoBehaviour
    {
         if (state == GameState.FreeRoam)
         {
-          playerController.HandleUpdate();
+            playerController.HandleUpdate();
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-          menuController.OpenMenu();
-          state = GameState.Menu;
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                menuController.OpenMenu();
+                state = GameState.Menu;
+            }
         }
+        else if (state == GameState.Cutscene)
+        {
+            playerController.Character.HandleUpdate();
         }
         else if (state == GameState.Battle)
         {

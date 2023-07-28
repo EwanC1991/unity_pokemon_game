@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
 
         transform.position = pos;
     }
-    public IEnumerator Move(Vector2 moveVec, Action OnMoveOver=null)
+    public IEnumerator Move(Vector2 moveVec, Action OnMoveOver=null, bool checkCollisions=true)
     {
 
         animator.MoveX = Mathf.Clamp(moveVec.x, -1f, 1f);
@@ -41,7 +41,7 @@ public class Character : MonoBehaviour
                 yield break;
         }
 
-        if (!IsPathClear(targetPos))
+        if (checkCollisions && !IsPathClear(targetPos))
             yield break;
 
         Vector2 pos = new Vector2(targetPos.x, targetPos.y - OffsetY);
