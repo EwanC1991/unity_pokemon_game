@@ -7961,6 +7961,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &675727230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4722353693242449118, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
+  m_PrefabInstance: {fileID: 1641508806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &709181980
 GameObject:
   m_ObjectHideFlags: 0
@@ -8008,10 +8013,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - rid: 1186036143428993029
+  - rid: 1268224094525194240
   - rid: 1186036143428993028
   - rid: 1186036143428993032
   - rid: 1186036143428993033
+  - rid: 1268224094525194241
   - rid: 1186036143428993034
+  - rid: 1268224094525194243
+  - rid: 1268224094525194244
+  - rid: 1268224094525194242
   references:
     version: 2
     RefIds:
@@ -8067,6 +8077,51 @@ MonoBehaviour:
         dialog:
           lines:
           - This is his house. Go see him before leaving town!
+    - rid: 1268224094525194240
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        direction: 3
+    - rid: 1268224094525194241
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 1641508807}
+        direction: 3
+    - rid: 1268224094525194242
+      type: {class: TeleportObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TeleportObjectAction
+        waitForCompletion: 1
+        gameObject: {fileID: 675727230}
+        position: {x: 3.5, y: 5.8}
+    - rid: 1268224094525194243
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 1641508807}
+        movePatterns:
+        - {x: -5, y: 0}
+    - rid: 1268224094525194244
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 1641508807}
+        movePatterns:
+        - {x: 0, y: 6}
 --- !u!61 &709181984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11442,7 +11497,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4722353693242449089, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
   m_PrefabInstance: {fileID: 1641508806}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 675727230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8057701b88d5476cb397d309aad07f5, type: 3}
