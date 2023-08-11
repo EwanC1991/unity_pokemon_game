@@ -21,18 +21,31 @@ public class GameMenuState : State<GameController>
     {
         gc = owner;
         menuController.gameObject.SetActive(true);
+        menuController.OnSelected += OnMenuItemSelected;
+        menuController.OnBack += OnBack;
+
     }
 
     public override void Execute()
     {
         menuController.HandleUpdate();
-
-        if (Input.GetKeyDown(KeyCode.X))
-            gc.StateMachine.Pop();
     }
 
     public override void Exit()
     {
         menuController.gameObject.SetActive(false);
+        menuController.OnSelected -= OnMenuItemSelected;
+        menuController.OnBack -= OnBack;
+    }
+
+    void OnMenuItemSelected(int selection)
+    {
+        if (selection == 0) //Pokemon
+            gc.StateMachine.Push(GamePartyState.i);
+    }
+
+    void OnBack()
+    {
+            gc.StateMachine.Pop();
     }
 }

@@ -9,13 +9,13 @@ public class TextSlot : MonoBehaviour, ISelectableItem
 
     Color originalColor;
 
-    private void Awake()
-    {
-        originalColor = text.color;
-    }
-
     public void OnSelectionChanged(bool selected)
     {
         text.color = (selected) ? GlobalSettings.i.HighlightedColor : originalColor;
+    }
+
+    public void Init()
+    {
+        originalColor = text.color;
     }
 }

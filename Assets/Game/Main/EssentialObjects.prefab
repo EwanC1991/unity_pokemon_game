@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 8558811997039094414}
   - component: {fileID: 1174896643978067007}
   - component: {fileID: 4737959882970003471}
+  - component: {fileID: 5251807586583045910}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -649,6 +650,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 2364158947006007367}
+--- !u!114 &5251807586583045910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660524286898971238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4433eeba88252a4c87337fc09ad7c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partyScreen: {fileID: 6427380123495132553}
 --- !u!1 &1660524286920034692
 GameObject:
   m_ObjectHideFlags: 0

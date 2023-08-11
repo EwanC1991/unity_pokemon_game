@@ -172,7 +172,7 @@ public class BattleSystem : MonoBehaviour
 
     void OpenPartyScreen()
     {
-        partyScreen.CalledFrom = state;
+        // partyScreen.CalledFrom = state;
         state = BattleState.PartyScreen;
         partyScreen.gameObject.SetActive(true);
     }
@@ -661,18 +661,18 @@ public class BattleSystem : MonoBehaviour
 
             partyScreen.gameObject.SetActive(false);
 
-            if (partyScreen.CalledFrom == BattleState.ActionSelection)
-            {
-                StartCoroutine(RunTurns(BattleAction.SwitchPokemon));
-            }
-            else
-            {
-                state = BattleState.Busy;
-                bool isTrainerAboutToUse = partyScreen.CalledFrom == BattleState.AboutToUse;
-                StartCoroutine(SwitchPokemon(selectedMember, isTrainerAboutToUse));
-            }
+            //if (partyScreen.CalledFrom == BattleState.ActionSelection)
+            //{
+            //    StartCoroutine(RunTurns(BattleAction.SwitchPokemon));
+            //}
+            //else
+            //{
+            //    state = BattleState.Busy;
+            //    bool isTrainerAboutToUse = partyScreen.CalledFrom == BattleState.AboutToUse;
+            //    StartCoroutine(SwitchPokemon(selectedMember, isTrainerAboutToUse));
+            //}
 
-            partyScreen.CalledFrom = null;
+            //partyScreen.CalledFrom = null;
         };
 
         Action onBack = () => 
@@ -683,17 +683,17 @@ public class BattleSystem : MonoBehaviour
                 return;
             }
             partyScreen.gameObject.SetActive(false);
-            if (partyScreen.CalledFrom == BattleState.AboutToUse)
-                {
-                    StartCoroutine(SendNextTrainerPokemon());
-                }
-            else
-                ActionSelection();
+            //if (partyScreen.CalledFrom == BattleState.AboutToUse)
+            //    {
+            //        StartCoroutine(SendNextTrainerPokemon());
+            //    }
+            //else
+            //    ActionSelection();
 
-            partyScreen.CalledFrom = null;
+            //partyScreen.CalledFrom = null;
         };
 
-        partyScreen.HandleUpdate(onSelected, onBack);
+        //partyScreen.HandleUpdate(onSelected, onBack);
     }
 
     void HandleAboutToUse()
