@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using GDEUtils.StateMachine;
 
 public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution, Shop }
 public class GameController : MonoBehaviour
@@ -11,24 +12,22 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
-   GameState state;
+    GameState state;
 
-   GameState prevState;
-   GameState stateBeforeEvolution;
+    GameState prevState;
+    GameState stateBeforeEvolution;
+
+    public StateMachine<GameController> StateMachine { get; private set; }
 
    public SceneDetails CurrentScene { get; private set; }
 
    public SceneDetails PrevScene { get; private set; }
-
-   MenuController menuController;
 
    public static GameController Instance;
 
    private void Awake() 
    {
       Instance = this;
-
-      menuController = GetComponent<MenuController>();
 
       Cursor.lockState = CursorLockMode.Locked;
       Cursor.visible = false;
@@ -42,6 +41,8 @@ public class GameController : MonoBehaviour
 
    private void Start() 
    {
+        StateMachine = new StateMachine<GameController>(this);
+        StateMachine.ChangeState(FreeRoamState.i);
         
         battleSystem.OnBattleOver += EndBattle;
 
@@ -58,13 +59,6 @@ public class GameController : MonoBehaviour
           if (state == GameState.Dialog)
                state = prevState;
         };
-
-        menuController.onBack += () => 
-        {
-          state = GameState.FreeRoam;
-        };
-
-        menuController.onMenuSelected += OnMenuSelected;
 
         EvolutionManager.i.OnStartEvolution += () => 
         {
@@ -169,17 +163,18 @@ public class GameController : MonoBehaviour
 
    private void Update() 
    {
-        if (state == GameState.FreeRoam)
-        {
-            playerController.HandleUpdate();
+        StateMachine.Execute();
+        //if (state == GameState.FreeRoam)
+        //{
+        //    playerController.HandleUpdate();
 
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                menuController.OpenMenu();
-                state = GameState.Menu;
-            }
-        }
-        else if (state == GameState.Cutscene)
+        //    if (Input.GetKeyDown(KeyCode.Return))
+        //    {
+        //        menuController.OpenMenu();
+        //        state = GameState.Menu;
+        //    }
+        //}
+        if (state == GameState.Cutscene)
         {
             playerController.Character.HandleUpdate();
         }
@@ -190,10 +185,6 @@ public class GameController : MonoBehaviour
         else if (state == GameState.Dialog)
         {
           DialogManager.Instance.HandleUpdate();
-        }
-        else if (state == GameState.Menu)
-        {
-          menuController.HandleUpdate();
         }
         else if (state == GameState.PartyScreen)
         {
@@ -278,5 +269,17 @@ public class GameController : MonoBehaviour
         StartCoroutine(Fader.i.FadeOut(0.5f));
    }
 
-   public GameState State => state;
+    private void OnGUI()
+    {
+        var style = new GUIStyle();
+        style.fontSize = 24;
+        GUILayout.Label("STATE STACK", style);
+
+        foreach (var state in StateMachine.StateStack)
+        {
+            GUILayout.Label(state.GetType().ToString(), style);
+        }
+    }
+
+    public GameState State => state;
 }
