@@ -569,7 +569,7 @@ public class BattleSystem : MonoBehaviour
                 moveToLearn = null;
                 state = BattleState.RunningTurn;
             };
-            moveSelectionUI.HandleMoveSelection(onMoveSelected);
+            // moveSelectionUI.HandleMoveSelection(onMoveSelected);
         }
     }
 
