@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e64ac552cbb462facca527dc9e8460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Caleb
+  name: Ash
   sprite: {fileID: 21300000, guid: 22bfac0777d724732a19693043aeeab3, type: 3}
 --- !u!114 &8949384960263130240
 MonoBehaviour:
@@ -154,6 +154,7 @@ MonoBehaviour:
   - {fileID: -1966354583, guid: 4f808fc1e8a604c0986ec7fb149af116, type: 3}
   - {fileID: 528885883, guid: 4f808fc1e8a604c0986ec7fb149af116, type: 3}
   - {fileID: 2024140445, guid: 4f808fc1e8a604c0986ec7fb149af116, type: 3}
+  surfSprites: []
   defaultDirection: 1
 --- !u!114 &8949384960263130242
 MonoBehaviour:

@@ -37,24 +37,29 @@ public class Inventory : MonoBehaviour, ISavable
           return currentSlots[itemIndex].Item;
    }
 
-   public ItemBase UseUtem(int itemIndex, Pokemon selectedPokemon, int selectedCategory)
+   public ItemBase UseItem(int itemIndex, Pokemon selectedPokemon, int selectedCategory)
    {
         var item = GetItem(itemIndex, selectedCategory);
+        return UseItem(item, selectedPokemon);
+
+   }
+    public ItemBase UseItem(ItemBase item, Pokemon selectedPokemon)
+    {
         bool itemUsed = item.Use(selectedPokemon);
 
         if (itemUsed)
         {
-          if (!item.IsReusable)
-               RemoveItem(item);
-               
-          return item;
+            if (!item.IsReusable)
+                RemoveItem(item);
+
+            return item;
         }
 
         return null;
+    }
 
-   }
 
-   public void AddItem(ItemBase item, int count=1)
+    public void AddItem(ItemBase item, int count=1)
    {
           int category = (int) GetCategoryFromItem(item);
           var currentSlots = GetSlotsByCategory(category);
