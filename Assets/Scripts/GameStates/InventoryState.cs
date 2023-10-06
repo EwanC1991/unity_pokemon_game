@@ -18,6 +18,8 @@ public class InventoryState : State<GameController>
 
     public override void Enter(GameController owner)
     {
+        gc = owner;
+
         inventoryUI.gameObject.SetActive(true);
         inventoryUI.OnSelected += OnItemSelected;
         inventoryUI.OnBack += OnBack;
@@ -26,13 +28,14 @@ public class InventoryState : State<GameController>
     public override void Execute()
     {
         inventoryUI.HandleUpdate();
-        inventoryUI.OnSelected -= OnItemSelected;
-        inventoryUI.OnBack -= OnBack;
+        
     }
 
     public override void Exit()
     {
         inventoryUI.gameObject?.SetActive(false);
+        inventoryUI.OnSelected -= OnItemSelected;
+        inventoryUI.OnBack -= OnBack;
     }
 
     void OnItemSelected(int selection)

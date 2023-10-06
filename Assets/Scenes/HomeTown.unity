@@ -11404,7 +11404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4722353693242449091, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
       propertyPath: dialog.lines.Array.data[0]
@@ -11490,7 +11490,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 623744199425199268, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7c7b9efb381ae4819b72c9abc8c973de, type: 3}
 --- !u!114 &1641508807 stripped
 MonoBehaviour:
