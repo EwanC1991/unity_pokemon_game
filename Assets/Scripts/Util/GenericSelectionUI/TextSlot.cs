@@ -18,4 +18,9 @@ public class TextSlot : MonoBehaviour, ISelectableItem
     {
         originalColor = text.color;
     }
+
+    public void SetText(string input)
+    {
+        text.text = input;
+    }
 }

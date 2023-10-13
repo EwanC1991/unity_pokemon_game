@@ -50,10 +50,19 @@ namespace GDE.GenericSelectionUI
             if (selectedItem != prevSelection)
                 UpdateSelectionUI();
 
+            
+
             if (Input.GetButtonDown("Action"))
+            {
+                Debug.Log("Action Button Pressed");
                 OnSelected?.Invoke(selectedItem);
+            } 
             else if (Input.GetButtonDown("Back"))
+            {
+                Debug.Log("Back Button Pressed");
                 OnBack?.Invoke();
+            }
+                
         }
 
         void HandleListSelection()

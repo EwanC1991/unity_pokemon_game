@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Linq;
+using GDEUtils.StateMachine;
 
 public enum BattleStates { Start, ActionSelection, MoveSelection, RunningTurn, Busy, Bag, PartyScreen, AboutToUse, MoveToForget, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
@@ -27,7 +28,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] GameObject pokeballSprite;
 
     [Header("UI")]
-    [SerializeField] MoveSelectionUI moveSelectionUI;
+    [SerializeField] MoveToForgetSelectionUI moveSelectionUI;
     [SerializeField] InventoryUI inventoryUI;
 
     [Header("Audio")]
@@ -40,6 +41,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] Image backgroundImage;
     [SerializeField] Sprite grassBackground;
     [SerializeField] Sprite waterBackground;
+
+    public StateMachine<BattleSystem> StateMachine { get; private set; }
 
 
     public event Action<bool> OnBattleOver;
@@ -90,7 +93,10 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
-    public IEnumerator SetupBattle(){
+    public IEnumerator SetupBattle()
+    {
+        StateMachine = new StateMachine<BattleSystem>(this);
+
 
         playerUnit.Clear();
         enemyUnit.Clear();
@@ -146,7 +152,9 @@ public class BattleSystem : MonoBehaviour
 
         escapeAttempts = 0;
         partyScreen.Init();
-        ActionSelection();
+
+
+        StateMachine.ChangeState(ActionSelectionState.i);
     }
 
     void ActionSelection(){
@@ -521,13 +529,10 @@ public class BattleSystem : MonoBehaviour
     }
 
     public void HandleUpdate() {
-        if (state == BattleStates.ActionSelection){
-            HandleActionSelection();
-        }
-        else if (state == BattleStates.MoveSelection){
-            HandleMoveSelection();
-        }
-        else if (state == BattleStates.PartyScreen){
+
+        StateMachine.Execute();
+
+        if (state == BattleStates.PartyScreen){
             HandlePartySelection();
         }
         else if (state == BattleStates.Bag)
@@ -897,4 +902,10 @@ public class BattleSystem : MonoBehaviour
             }
         }
     }
- }
+
+
+    public BattleDialogBox DialogBox => dialogBox;
+
+    public BattleUnit PlayerUnit => playerUnit;
+    public BattleUnit EnemyUnit => enemyUnit;
+}

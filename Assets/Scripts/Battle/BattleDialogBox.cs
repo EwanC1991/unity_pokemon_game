@@ -84,7 +84,8 @@ public class BattleDialogBox : MonoBehaviour
             ppText.color = Color.black;
     }
 
-    public void SetMoveNames(List<Move> moves){
+    public void SetMoveNames(List<Move> moves)
+    {
         for (int i=0; i<moveTexts.Count; ++i){
             if (i < moves.Count)
                 moveTexts[i].text = moves[i].Base.Name;
