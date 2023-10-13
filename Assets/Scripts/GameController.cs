@@ -102,32 +102,16 @@ public class GameController : MonoBehaviour
 
    public void StartBattle(BattleTrigger trigger) 
    {
-        state = GameState.Battle;
-        battleSystem.gameObject.SetActive(true);
-        worldCamera.gameObject.SetActive(false);
-
-        var playerParty = playerController.GetComponent<PokemonParty>();
-        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(trigger);
-
-        var wildPokemonCopy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
-
-        battleSystem.StartBattle(playerParty, wildPokemonCopy, trigger);
+        BattleState.i.trigger = trigger;
+        StateMachine.Push(BattleState.i);
    }
 
    TrainerController trainer;
 
    public void StartTrainerBattle(TrainerController trainer) 
    {
-     state = GameState.Battle;
-     battleSystem.gameObject.SetActive(true);
-     worldCamera.gameObject.SetActive(false);
-
-     this.trainer = trainer;
-     var playerParty = playerController.GetComponent<PokemonParty>();
-     var trainerParty = trainer.GetComponent<PokemonParty>();
-
-
-     battleSystem.StartTrainerBattle(playerParty, trainerParty);
+        BattleState.i.trainer = trainer;
+        StateMachine.Push(BattleState.i);
    }
 
 
@@ -139,11 +123,7 @@ public class GameController : MonoBehaviour
 
    void EndBattle(bool won)
    {
-     if (trainer!= null && won == true)
-     {
-          trainer.BattleLost();
-          trainer = null;
-     }
+     
 
      partyScreen.SetPartyData();
         
@@ -168,10 +148,6 @@ public class GameController : MonoBehaviour
         if (state == GameState.Cutscene)
         {
             playerController.Character.HandleUpdate();
-        }
-        else if (state == GameState.Battle)
-        {
-          battleSystem.HandleUpdate();
         }
         else if (state == GameState.Dialog)
         {
@@ -249,4 +225,7 @@ public class GameController : MonoBehaviour
     }
 
     public GameState State => state;
+
+    public PlayerController PlayerController => playerController;
+    public Camera WorldCamera => worldCamera;
 }
